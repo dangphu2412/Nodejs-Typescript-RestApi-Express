@@ -1,0 +1,27 @@
+extends ../layout/SignLayout
+
+block content
+    form.user#register
+        .form-group.row
+            .col-sm-6.mb-3.mb-sm-0
+                input#lastNameRegis.form-control.form-control-user(type='text' aria-describedby='Lastname' placeholder='Last name')
+            .col-sm-6
+                input#firstNameRegis.form-control.form-control-user(type='text' placeholder='First name')
+        .form-group
+            input#emailRegis.form-control.form-control-user(type='email' placeholder='Email')
+        .form-group.row
+            .col-sm-6.mb-3.mb-sm-0   
+                input#passwordRegis.form-control.form-control-user(type='password' placeholder='Password')
+            .col-sm-6
+                input#validatePassword.form-control.form-control-user(type='password' placeholder='Repeat password')
+        a.btn.btn-primary.btn-user.btn-block(href='index.html')
+            | Register
+        hr
+        a.btn.btn-google.btn-user.btn-block(href='index.html')
+            i.fab.fa-google.fa-fw
+            |  Register with Google
+        a.btn.btn-facebook.btn-user.btn-block(href='index.html')
+            i.fab.fa-facebook-f.fa-fw
+            |  Register with Facebook
+block scripts
+    script(src="/js/auth/register.js")
