@@ -17,15 +17,17 @@ $(document).ready(function() {
             validatePassword(password, passwordCheck);
 
             const regisData =  {
-                name: lastname + firstname,
-                email,
+                sort_name: lastname + firstname,
+                username: email,
                 password
             }
 
             const requestStatus = await $.ajax({
-                url: '/api/user/',
-                data,
+                method: 'GET',
+                url: '/api/users/auth/signup',
+                data: regisData,
             })
+            console.log(requestStatus);
 
         } catch (error) {
             alert(error);

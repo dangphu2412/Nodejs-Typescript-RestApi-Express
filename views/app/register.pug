@@ -14,10 +14,10 @@ block content
                 input#passwordRegis.form-control.form-control-user(type='password' placeholder='Password')
             .col-sm-6
                 input#validatePassword.form-control.form-control-user(type='password' placeholder='Repeat password')
-        a.btn.btn-primary.btn-user.btn-block(href='index.html')
+        a.btn.btn-primary.btn-user.btn-block(href='/api/users/auth/signup')
             | Register
         hr
-        a.btn.btn-google.btn-user.btn-block(href='index.html')
+        a.btn.btn-google.btn-user.btn-block(href='/api/users/auth/google')
             i.fab.fa-google.fa-fw
             |  Register with Google
         a.btn.btn-facebook.btn-user.btn-block(href='index.html')
